@@ -36,7 +36,7 @@ void PID::UpdateError(double cte)
 double PID::TotalError()
 {
   /**
-   * TODO: Calculate and return the total error
+   * TODO: Calculate and return the total error 
    */
   double steer = -p_error - d_error - i_error;
   if (steer > 1)

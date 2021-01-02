@@ -17,6 +17,7 @@ double rad2deg(double x) { return x * 180 / pi(); }
 // Checks if the SocketIO event has JSON data.
 // If there is data the JSON object in string format will be returned,
 // else the empty string "" will be returned.
+
 string hasData(string s)
 {
   auto found_null = s.find("null");
@@ -41,7 +42,7 @@ int main()
   /**
    * TODO: Initialize the pid variable.
    */
-  pid.Init(.2, .0001, 3);
+  pid.Init(.2, .004, 3);
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
                      uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
