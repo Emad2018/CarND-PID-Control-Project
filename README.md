@@ -123,17 +123,17 @@ using the cte:
   
   I have tested using just the P_error and the car gone off track because of the overshoot.
   
-  [P controller]("output/p_loquality.mp4")
+  [P controller](output/p_loquality.mp4)
 
 * the D term comes to pervent the overshoot.
 
 I have tested using  the P_error and D_Error, the car kept in track but the error was still little high due to the bias.
 
-[PD controller]("output/pd_loquality.mp4")
+[PD controller](output/pd_loquality.mp4)
 
 * The I term comes to prevent the bias.
 
-[PID controller]("output/PID_0001_LOquality.mp4")
+[PID controller](output/PID_0001_LOquality.mp4)
 
 
 3-Describe how the final hyperparameters were chosen:
@@ -144,9 +144,9 @@ then I have add I term of .004 but I tried smaller value =.0001 and get better r
 
 
 
-[PID .0001 controller]("output/PID_0001_LOquality.mp4")
+[PID .0001 controller](output/PID_0001_LOquality.mp4)
 
-[PID .004 controller]("output/PID_004_loquality.mp4")
+[PID .004 controller](output/PID_004_loquality.mp4)
 
 
 
