@@ -1,8 +1,9 @@
 #ifndef PID_H
 #define PID_H
 
-class PID {
- public:
+class PID
+{
+public:
   /**
    * Constructor
    */
@@ -31,7 +32,7 @@ class PID {
    */
   double TotalError();
 
- private:
+private:
   /**
    * PID Errors
    */
@@ -41,10 +42,13 @@ class PID {
 
   /**
    * PID Coefficients
-   */ 
+   */
   double Kp;
   double Ki;
   double Kd;
+
+  double prev_cte = 0;
+  double errors = 0;
 };
 
-#endif  // PID_H
+#endif // PID_H
