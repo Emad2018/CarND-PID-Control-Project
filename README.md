@@ -93,6 +93,77 @@ that's just a guess.
 One last note here: regardless of the IDE used, every submitted project must
 still be compilable with cmake and make./
 
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+**Build a PID Controller Project**
+
+
+<img src="./output/PID.png" width="820" height="248" />
+
+The goals / steps of this project are the following:
+* Initilize the PID constants. 
+* Get the Cross Track Error (cte). 
+* Update the Error.
+* Calculate the Total Error.
+* update the steering angle,the steering value is [-1, 1]. 
+
+## Rubric Points
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/1972/view) individually and describe how I addressed each point in my implementation.
+
+
+1- The PID procedure follows what was taught in the lessons:
+   
+using the cte:
+
+* I implemented the P_error term using Kp *cte.
+* The I_error was Implemented using Ki * sum of prev.errors.
+* the D_Error was Implemented using Kd * difference between current error and prev.error (With assumtion the dt=1)
+
+2- Describe the effect each of the P, I, D components had in your implementation:
+
+* the P term decrease the error but has an Issue of overshoot.
+  
+  I have tested using just the P_error and the car gone off track because of the overshoot.
+  
+  [P controller]("./output/p_loquality.mp4")
+
+* the D term comes to pervent the overshoot.
+
+I have tested using  the P_error and D_Error, the car kept in track but the error was still little high due to the bias.
+
+[PD controller]("./output/pd_loquality.mp4")
+
+* The I term comes to prevent the bias.
+
+[PID controller]("./output/PID_0001_LOquality.mp4")
+
+
+3-Describe how the final hyperparameters were chosen:
+
+I have made a manual tuning starting with the PD controller as P gain =.2 and D gain =3
+
+then I have add I term of .004 but I tried smaller value =.0001 and get better result.
+
+
+
+[PID .0001 controller]("./output/PID_0001_LOquality.mp4")
+
+[PID .004 controller]("./output/PID_004_loquality.mp4")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
